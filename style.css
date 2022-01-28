@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: auto;
+  background-color: #dbcfb0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  margin: 30px auto;
+  width: 350px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.inner {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+.inner button:first-child {
+  margin-left: 18px;
+}
+
+.inner button {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 30px;
+  cursor: pointer;
+  color: #718f94;
+  border: 0;
+  outline: 0;
+  background-color: #dbcfb0;
+}
+
+.inner button:focus {
+  color: #000;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.inc-exp-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.inc-exp-container>div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container>div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus1 {
+  color: #1ba853;
+}
+
+.money.minus1 {
+  color: #bd2818;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  position: relative;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.optionBox {
+  width: 100%;
+  height: 50px;
+  position: flex;
+  justify-content: space-between;
+}
+
+.form .select input {
+  cursor: pointer;
+  margin: 10px;
+  border: 0;
+  text-align: center;
+  width: 40%;
+  display: inline-block;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #c0392b;
+  font-size: 16px;
+  color: #fff;
+}
+
+.select {
+  width: 100%;
+}
+
+.select input[type=radio] {
+  display: none;
+}
+
+.select input[type=radio]+label {
+  display: inline-block;
+  cursor: pointer;
+  height: 40px;
+  width: 47%;
+  border: 1px solid #333;
+  line-height: 24px;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 5px;
+  padding-top: 5px;
+  margin-right: 2px;
+  border-radius: 3px;
+}
+
+.select input[type=radio]+label {
+  background-color: #90b494;
+  border: 1px #fff;
+  color: #fff;
+}
+
+.select input[type=radio]:checked+label {
+  background-color: #718f94;
+  color: #fff;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #545775;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 10px solid #1ba853;
+}
+
+.list li.minus {
+  border-right: 10px solid #c0392b;
+}
+
+.list li.minus.hide,
+.list li.plus.hide {
+  display: none;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 5px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-left: -5px;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+#addNewTrans {
+  text-align: center;
+}
+
+@media (max-width: 374px) {}
