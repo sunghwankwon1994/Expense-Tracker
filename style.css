@@ -242,10 +242,10 @@ input[type="number"] {
 
 @media (max-width: 500px) {
   .inner button {
-    margin-right: 15px;
+    justify-content: space-between;
   }
   .inner button:first-child {
-    margin-left: 35px;
+    margin-left: 18px;
   }
   .delete-btn {
     opacity: 1;
